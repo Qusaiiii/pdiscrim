@@ -21,7 +21,7 @@ client.on('message',async message => {
       let iLD = new Discord.RichEmbed()
       .setAuthor(message.author.username, message.author.avatarURL)
       .setDescription(client.users.filter(f => f.discriminator === tag).map(r => r.username).slice(0, 10).join('\n'))
-      .setFooter(message.author.avatar));
+      .setFooter(message.author.avatar);
       message.channel.send(iLD);
     } else if(!args[1]) {
       tag = message.author.discriminator;
